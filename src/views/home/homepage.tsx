@@ -57,6 +57,7 @@ const HomePageView = ({
       .then((data) => {
         dispatch({ type: "SET_ARTICLE_LIST", payload: data });
         dispatch({ type: "RESET_SEARCH_CLICKED" });
+        setInput("");
         dispatch({ type: "RESET_PAGINATION_CLICKED" });
       })
       .catch((err) => console.log(err));
