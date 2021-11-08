@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticlesList component tests ArticlesList component render 1`] = `
+<div
+  class="articles-list"
+>
+  <h2>
+    Results:
+  </h2>
+  <a
+    href="/article/0"
+    style="text-decoration: none;"
+  >
+    <div
+      class="card-wrapper"
+    >
+      <div
+        class="card-header"
+      >
+        <h3
+          class="title-small"
+        />
+      </div>
+    </div>
+  </a>
+</div>
+`;

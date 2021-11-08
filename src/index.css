@@ -1,0 +1,35 @@
+html, body {
+  margin: 0;
+  padding:0;
+  min-height:100%;
+}
+
+html {
+  font-size: 15px;
+  font-weight: 500;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--background-color);
+  color: #202124;
+  height:100vh;
+}
+
+h2 {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0;
+    line-height: 22px;
+    font-weight: 600;
+    text-rendering: optimizeLegibility;
+}
+
+@media (min-width: 50em){
+    h2 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+}

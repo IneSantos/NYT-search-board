@@ -1,0 +1,22 @@
+import { Article } from "../../components/pages/article-page/article-type";
+
+export type SetArticleList = {
+    type: "SET_ARTICLE_LIST",
+    payload: Article[]
+}
+
+export type NextPage = {
+    type: "SET_NEXT_PAGE"
+}
+
+export type PrevPage = {
+    type: "SET_PREV_PAGE"
+}
+
+export type SearchClicked = { 
+    type: "SEARCH_CLICKED"
+}
+
+export type ResetSearchClicked = { 
+    type: "RESET_SEARCH_CLICKED"
+}

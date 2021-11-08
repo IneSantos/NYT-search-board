@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleBody component tests ArticleBody component render 1`] = `
+<div
+  class="article-body"
+>
+  <div
+    class="description"
+  >
+    This is an description
+  </div>
+  <a
+    class="article-action article-action-Read the full article"
+    href="/"
+  >
+     
+    Read the full article
+     
+  </a>
+</div>
+`;

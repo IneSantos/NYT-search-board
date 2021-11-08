@@ -1,0 +1,16 @@
+@import "../../../../theme-variables.css";
+
+.search-term {
+  outline: none;
+  padding-left: 30px;
+  background-color: var(--primary-color);
+  border: 1px solid var(--card-border-color);
+  display: block;
+  height: 56px;
+  width: 100%;
+  border-right: 0;
+}
+
+.search-term:focus{
+color:  var(--letter-color-black);
+}

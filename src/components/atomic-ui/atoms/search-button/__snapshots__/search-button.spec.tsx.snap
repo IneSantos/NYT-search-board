@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchButton atom tests SearchButton component render 1`] = `
+<button
+  class="search-button"
+  type="submit"
+>
+  <i
+    class="fas fa-search"
+  />
+</button>
+`;

@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage component tests HomePage component render 1`] = `
+<section>
+  <header>
+    <div
+      class="banner"
+    >
+      “The New York Times” article search application
+    </div>
+  </header>
+  <div
+    class="page-body-wrapper"
+  >
+    <div
+      class="page-body"
+    >
+      <div
+        class="header-wrapper"
+      >
+        <div
+          class="search-wrapper"
+        >
+          <h2>
+            Type search query term in here: 
+          </h2>
+          <div
+            class="search"
+          >
+            <input
+              class="search-term"
+              placeholder="What are you looking for?"
+              type="text"
+              value="This is an input"
+            />
+            <button
+              class="search-button"
+              type="submit"
+            >
+              <i
+                class="fas fa-search"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="articles-list"
+      >
+        <h2>
+          Results:
+        </h2>
+        <a
+          href="/article/0"
+          style="text-decoration: none;"
+        >
+          <div
+            class="card-wrapper"
+          >
+            <div
+              class="card-header"
+            >
+              <h3
+                class="title-small"
+              />
+            </div>
+          </div>
+        </a>
+      </div>
+      <div
+        class="pagination"
+      >
+        <a
+          class="article-action article-action-< Prev page"
+        >
+           
+          &lt; Prev page
+           
+        </a>
+        <a
+          class="article-action article-action-Next page >"
+        >
+           
+          Next page &gt;
+           
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+`;

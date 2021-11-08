@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleAction atom tests ArticleAction component render 1`] = `
+<a
+  class="article-action article-action-ARTICLE ACTION"
+>
+   
+  ARTICLE ACTION
+   
+</a>
+`;

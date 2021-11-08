@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleCardHeader component tests ArticleCardHeader component render 1`] = `
+<div
+  class="card-header"
+>
+  <h3
+    class="title-small"
+  >
+    This is an headline
+  </h3>
+</div>
+`;

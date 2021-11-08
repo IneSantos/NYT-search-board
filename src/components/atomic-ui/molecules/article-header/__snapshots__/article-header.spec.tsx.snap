@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleHeader component tests ArticleHeader component render 1`] = `
+<div
+  class="article-header-wrapper"
+>
+  <a
+    class="article-action article-action-< Go to results page"
+    href="/"
+  >
+     
+    &lt; Go to results page
+     
+  </a>
+  <div
+    class="article-header"
+  >
+    <h3
+      class="title"
+    >
+      This is an headline
+    </h3>
+    <div
+      class="subtitle"
+    >
+      NaN.NaN.NaN
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination component tests Pagination component render 1`] = `
+<div
+  class="pagination"
+>
+  <a
+    class="article-action article-action-< Prev page"
+  >
+     
+    &lt; Prev page
+     
+  </a>
+  <a
+    class="article-action article-action-Next page >"
+  >
+     
+    Next page &gt;
+     
+  </a>
+</div>
+`;

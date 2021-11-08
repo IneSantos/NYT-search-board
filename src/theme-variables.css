@@ -1,0 +1,15 @@
+:root {
+    --primary-color: #fff;
+    --background-color: #f8f9fa;
+    --bright-border-color: #e8eaed;
+    --card-border-color: #dadce0;
+    --filter-table: hsl(180, 31%, 95%);
+    --light-grey: #e7e9ea;
+    --darker-grey: #f8f8f8;
+    --links-blue: #1967d2;
+    --input-green: #80868b;
+    --dark-greyish: hsl(180, 8%, 52%);
+    --darker-greyish: #5f6368;
+    --very-dark-greyish: hsl(180, 14%, 20%);
+    --letter-color-black: #202124;
+  }

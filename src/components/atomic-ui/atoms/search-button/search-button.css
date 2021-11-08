@@ -1,0 +1,14 @@
+@import "../../../../theme-variables.css";
+
+
+.search-button {
+    height: 60px;
+    border:  1px solid var(--card-border-color);
+    background: var(--primary-color);
+    text-align: center;
+    color: var(--darker-greyish);
+    cursor: pointer;
+    font-size: 20px;
+    border-left: 0;
+    padding-right: 30px;
+}

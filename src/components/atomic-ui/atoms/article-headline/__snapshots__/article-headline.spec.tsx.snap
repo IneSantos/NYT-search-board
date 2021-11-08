@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleHeadline atom tests ArticleHeadline component render 1`] = `
+<h3
+  class="title"
+>
+  This is a headline
+</h3>
+`;

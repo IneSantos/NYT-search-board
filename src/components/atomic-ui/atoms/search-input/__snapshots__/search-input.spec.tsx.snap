@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchInput atom tests SearchInput component render 1`] = `
+<input
+  class="search-term"
+  placeholder="What are you looking for?"
+  type="text"
+  value="This is an input"
+/>
+`;
