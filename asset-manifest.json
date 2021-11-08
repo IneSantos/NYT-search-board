@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/NYT-search-board/static/css/main.1f082703.chunk.css",
-    "main.js": "/NYT-search-board/static/js/main.a91e2178.chunk.js",
-    "main.js.map": "/NYT-search-board/static/js/main.a91e2178.chunk.js.map",
+    "main.js": "/NYT-search-board/static/js/main.b703cfde.chunk.js",
+    "main.js.map": "/NYT-search-board/static/js/main.b703cfde.chunk.js.map",
     "runtime-main.js": "/NYT-search-board/static/js/runtime-main.4ee07c10.js",
     "runtime-main.js.map": "/NYT-search-board/static/js/runtime-main.4ee07c10.js.map",
     "static/css/2.679831fc.chunk.css": "/NYT-search-board/static/css/2.679831fc.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.679831fc.chunk.css",
     "static/js/2.ba45c334.chunk.js",
     "static/css/main.1f082703.chunk.css",
-    "static/js/main.a91e2178.chunk.js"
+    "static/js/main.b703cfde.chunk.js"
   ]
 }
