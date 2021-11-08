@@ -41,14 +41,15 @@ const HomePageView = ({
     if (page === -1) {
       dispatch({ type: "SET_NEXT_PAGE" });
     }
-
-    getArticlesByPage(page)
-      .then((data) => {
-        setPageShown(page);
-        dispatch({ type: "SET_ARTICLE_LIST", payload: data });
-        dispatch({ type: "RESET_PAGINATION_CLICKED" });
-      })
-      .catch((err) => console.log(err));
+    if (page !== -1) {
+      getArticlesByPage(page)
+        .then((data) => {
+          setPageShown(page);
+          dispatch({ type: "SET_ARTICLE_LIST", payload: data });
+          dispatch({ type: "RESET_PAGINATION_CLICKED" });
+        })
+        .catch((err) => console.log(err));
+    }
   };
 
   const getResultsByTitle = () => {
