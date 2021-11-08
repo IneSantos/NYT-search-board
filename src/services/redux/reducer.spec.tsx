@@ -106,7 +106,6 @@ describe("reducer tests", () => {
     });
   });
 
-
   test(`reducer reset pagination click value`, () => {
     const state = reducer(initialState, {
       type: "RESET_PAGINATION_CLICKED",
