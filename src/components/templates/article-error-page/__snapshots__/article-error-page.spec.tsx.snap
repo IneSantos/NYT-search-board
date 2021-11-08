@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleErrorPage component tests ArticleErrorPage component render 1`] = `
+<section>
+  <header>
+    <div
+      class="banner"
+    >
+      “The New York Times” article search application
+    </div>
+  </header>
+  <div
+    class="page-body-wrapper"
+  >
+    <div
+      class="page-body"
+    >
+      <div
+        class="article-error"
+      >
+        <a
+          class="article-action article-action-< Go to results page"
+          href="/"
+        >
+           
+          &lt; Go to results page
+           
+        </a>
+        <div
+          class="description"
+        >
+          Invalid URL please go back to the Results Page
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;

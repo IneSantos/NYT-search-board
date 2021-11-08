@@ -5,25 +5,25 @@ import PageHeader from "../../atomic-ui/atoms/page-header/page-header";
 import { Article } from "../../pages/article-page/article-type";
 
 interface Props {
-  articles: Article[],
-  searchInput: string,
-  handleSearch: (e: { target: HTMLInputElement }) => void
+  articles: Article[];
+  searchInput: string;
+  handleSearch: (e: { target: HTMLInputElement }) => void;
 }
 
 const HomePageTemplate = (props: Props) => {
   const { searchInput, handleSearch, articles } = props;
   return (
-      <section>
-        <PageHeader/>
-        <div className="page-body-wrapper">
-          <div className="page-body">
-            <SearchBar searchInput={searchInput} handleSearch={handleSearch} />
-            <ArticlesList articles={articles}/>
-            <Pagination/>
-          </div>
+    <section>
+      <PageHeader />
+      <div className="page-body-wrapper">
+        <div className="page-body">
+          <SearchBar searchInput={searchInput} handleSearch={handleSearch} />
+          <ArticlesList articles={articles} />
+          <Pagination />
         </div>
-      </section>
+      </div>
+    </section>
   );
-}
+};
 
 export default HomePageTemplate;

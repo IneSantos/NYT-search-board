@@ -1,12 +1,12 @@
-import "./article-description.css"
+import "./article-description.css";
 
 interface Props {
-  description: string
+  description: string;
 }
 
 const ArticleDescription = (props: Props) => {
   const { description } = props;
-  return <div className="description">{description}</div>
-}
+  return <div className="description">{description}</div>;
+};
 
 export default ArticleDescription;

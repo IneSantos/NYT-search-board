@@ -1,22 +1,22 @@
 import SearchButton from "../../atoms/search-button/search-button";
 import SearchInput from "../../atoms/search-input/search-input";
-import './search-input-bar.css';
+import "./search-input-bar.css";
 
 interface Props {
-    searchInput: string,
-    handleSearch: (e: { target: HTMLInputElement }) => void
+  searchInput: string;
+  handleSearch: (e: { target: HTMLInputElement }) => void;
 }
 
 const SearchInpuBar = ({ searchInput, handleSearch }: Props) => {
-    return (
-        <div className="search-wrapper">
-            <h2>Type search query term in here: </h2>
-            <div className="search">
-                <SearchInput input={searchInput} handleSearch={handleSearch} />
-                <SearchButton />
-            </div>
-        </div>
-    )
-}
+  return (
+    <div className="search-wrapper">
+      <h2>Type search query term in here: </h2>
+      <div className="search">
+        <SearchInput input={searchInput} handleSearch={handleSearch} />
+        <SearchButton />
+      </div>
+    </div>
+  );
+};
 
 export default SearchInpuBar;

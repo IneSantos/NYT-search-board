@@ -1,16 +1,16 @@
-import "./article-headline.css"
+import "./article-headline.css";
 interface Props {
-  headline: string,
-  isSmall?: boolean
+  headline: string;
+  isSmall?: boolean;
 }
 
 const ArticleHeadline = (props: Props) => {
   const { headline, isSmall } = props;
   return <h3 className={`title${isSmall ? "-small" : ""}`}>{headline}</h3>;
-}
+};
 
 ArticleHeadline.defaultProps = {
-  isSmall: false
-}
+  isSmall: false,
+};
 
 export default ArticleHeadline;

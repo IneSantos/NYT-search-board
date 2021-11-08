@@ -1,4 +1,4 @@
-import {formatDate} from "./utilities";
+import { formatDate } from "./utilities";
 
 describe("utilities tests", () => {
   test(`formatDate`, () => {

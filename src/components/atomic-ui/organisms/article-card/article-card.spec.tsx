@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from '@testing-library/react';
+import { render } from "@testing-library/react";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router } from "react-router-dom";
 import configureStore from "redux-mock-store";
@@ -11,27 +11,30 @@ let mockedStore;
 describe("ArticleCard component tests", () => {
   test(`ArticleCard component render`, () => {
     mockedStore = configureStore();
-    store = mockedStore({  
-        articleList: [{
+    store = mockedStore({
+      article: {
+        articleList: [
+          {
             id: "",
             headline: "",
-            abstract: "", 
+            abstract: "",
             keywords: [],
             section: "",
             snippet: "",
             pub_date: "",
             source: "",
-            web_url: ""
-        }],
+            web_url: "",
+          },
+        ],
         page: 0,
-        searchClicked: false
+        searchClicked: false,
+      },
     });
-
 
     const { container } = render(
       <Router>
         <Provider store={store}>
-          <ArticleCard headline="This is an headline" index={1}/>
+          <ArticleCard headline="This is an headline" index={1} />
         </Provider>
       </Router>
     );

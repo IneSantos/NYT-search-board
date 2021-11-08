@@ -89,3 +89,18 @@ exports[`HomePage component tests HomePage component render 1`] = `
   </div>
 </section>
 `;
+
+exports[`HomePage component tests HomePage component render without articles 1`] = `
+<div
+  class="loder"
+>
+  <div
+    class="lds-ellipsis"
+  >
+    <div />
+    <div />
+    <div />
+    <div />
+  </div>
+</div>
+`;
