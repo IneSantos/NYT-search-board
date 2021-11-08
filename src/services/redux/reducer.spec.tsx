@@ -71,7 +71,7 @@ describe("reducer tests", () => {
       })
     ).toStrictEqual({
       articleList: [],
-      page: -1,
+      page: 0,
       searchClicked: false,
       pageClicked: true,
     });
