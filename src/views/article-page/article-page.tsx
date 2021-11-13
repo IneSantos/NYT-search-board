@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import { connect } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { Article } from "../../components/pages/article-page/article-type";
 import ArticlePage from "../../components/pages/article-page/article-page";
 import "normalize.css";
 import "./article-page.css";
+import { getArticleURL } from "../../utilities/utilities";
 
 interface Props {
   article: Article;
@@ -12,10 +13,13 @@ interface Props {
 
 const ArticlePageView = (props: Props) => {
   const { article } = props;
+  //@ts-ignore
+  const { id } = useParams();
   const navigate = useNavigate();
+  const articleURl = getArticleURL(article.id, 0);
 
   useEffect(() => {
-    if (article.headline === "") {
+    if (article.headline === "" || id !== articleURl) {
       navigate("/article/error");
     }
   }, [article, navigate]);
