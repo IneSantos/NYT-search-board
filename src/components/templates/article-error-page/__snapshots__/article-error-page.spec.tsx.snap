@@ -19,7 +19,7 @@ exports[`ArticleErrorPage component tests ArticleErrorPage component render 1`] 
         class="article-error"
       >
         <a
-          class="article-action article-action-< Go to results page"
+          class="article-action"
           href="/"
         >
            

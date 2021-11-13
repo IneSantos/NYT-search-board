@@ -20,6 +20,12 @@ exports[`SearchBar component tests SearchBar component render 1`] = `
         value="This is an input"
       />
       <button
+        class="clear-button"
+        type="reset"
+      >
+        clear
+      </button>
+      <button
         class="search-button"
         type="submit"
       >

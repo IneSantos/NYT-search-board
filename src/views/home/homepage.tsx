@@ -14,6 +14,7 @@ import React from "react";
 interface Props {
   articles: Article[];
   page: number;
+  clearClicked: boolean;
   searchClicked: boolean;
   pageClicked: boolean;
 }
@@ -21,6 +22,7 @@ interface Props {
 const HomePageView = ({
   articles,
   page,
+  clearClicked,
   searchClicked,
   pageClicked,
 }: Props) => {
@@ -58,6 +60,7 @@ const HomePageView = ({
         dispatch({ type: "SET_ARTICLE_LIST", payload: data });
         dispatch({ type: "RESET_SEARCH_CLICKED" });
         setInput("");
+        dispatch({ type: "RESET_CLEAR_CLICKED" });
         dispatch({ type: "RESET_PAGINATION_CLICKED" });
       })
       .catch((err) => console.log(err));
@@ -78,6 +81,12 @@ const HomePageView = ({
     getResultsByTitle();
   }, [input, searchClicked]);
 
+  useEffect(() => {
+    if (!clearClicked) return;
+    setInput("");
+    dispatch({ type: "RESET_CLEAR_CLICKED" });
+  }, [input, clearClicked]);
+
   return (
     <>
       {articles.length == 0 || pageClicked ? (
@@ -97,6 +106,7 @@ const mapStateToProps = (state) => {
   return {
     articles: state.article.articleList,
     page: state.article.page,
+    clearClicked: state.article.clearClicked,
     searchClicked: state.article.searchClicked,
     pageClicked: state.article.pageClicked,
   };

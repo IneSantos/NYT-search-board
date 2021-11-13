@@ -1,4 +1,5 @@
 import { Article } from "../../pages/article-page/article-type";
+import ShareAction from "../../atomic-ui/atoms/share-action/share-action";
 import ArticleHeader from "../../atomic-ui/molecules/article-header/article-header";
 import ArticleBody from "../../atomic-ui/molecules/article-body/article-body";
 import PageHeader from "../../atomic-ui/atoms/page-header/page-header";
@@ -19,6 +20,9 @@ const ArticlePageTemplate = (props: Props) => {
             description={article.abstract}
             webURL={article.web_url}
           />
+        </div>
+        <div className="page-footer">
+          <ShareAction webURL={article.web_url} />
         </div>
       </div>
     </section>

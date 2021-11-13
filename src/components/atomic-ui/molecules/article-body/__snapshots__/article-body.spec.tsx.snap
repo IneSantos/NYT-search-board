@@ -10,7 +10,7 @@ exports[`ArticleBody component tests ArticleBody component render 1`] = `
     This is an description
   </div>
   <a
-    class="article-action article-action-Read the full article"
+    class="article-action"
     href="/"
   >
      

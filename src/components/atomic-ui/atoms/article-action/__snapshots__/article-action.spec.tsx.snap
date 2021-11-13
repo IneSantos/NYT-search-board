@@ -2,7 +2,7 @@
 
 exports[`ArticleAction atom tests ArticleAction component render 1`] = `
 <a
-  class="article-action article-action-ARTICLE ACTION"
+  class="article-action"
 >
    
   ARTICLE ACTION

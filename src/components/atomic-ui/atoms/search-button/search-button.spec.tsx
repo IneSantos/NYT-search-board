@@ -32,7 +32,7 @@ describe("SearchButton atom tests", () => {
 
     const { container } = render(
       <Provider store={store}>
-        <SearchButton />
+        <SearchButton input="This is an input" />
       </Provider>
     );
     expect(container.firstChild).toMatchSnapshot();

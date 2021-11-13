@@ -3,19 +3,36 @@ import ArticleAction from "../../atoms/article-action/article-action";
 import "./pagination.css";
 
 interface Props {
+  page: number;
   prevPage?: () => void;
   nextPage?: () => void;
 }
 
 const Pagination = (props: Props) => {
-  const { prevPage, nextPage } = props;
+  const { page, prevPage, nextPage } = props;
 
   return (
     <div className="pagination">
-      <ArticleAction name={"< Prev page"} handleAction={prevPage} />
-      <ArticleAction name={"Next page >"} handleAction={nextPage} />
+      <ArticleAction
+        name={"Next page >"}
+        cssClass="next-page"
+        handleAction={nextPage}
+      />
+      {page === 0 && (
+        <ArticleAction
+          name={"< Prev page"}
+          cssClass="prev-page"
+          handleAction={prevPage}
+        />
+      )}
     </div>
   );
+};
+
+const mapStateToProps = (state) => {
+  return {
+    page: state.article.page,
+  };
 };
 
 const mapDispatchToProps = (dispatch) => {
@@ -25,4 +42,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(Pagination);
+export default connect(mapStateToProps, mapDispatchToProps)(Pagination);

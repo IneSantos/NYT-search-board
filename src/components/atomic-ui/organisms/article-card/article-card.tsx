@@ -1,25 +1,28 @@
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import { getArticleURL } from "../../../../utilities/utilities";
+import { Article } from "../../../pages/article-page/article-type";
 import CardHeader from "../../molecules/article-card-header/article-card-header";
 import "./article-card.css";
 
 interface Props {
-  headline: string;
+  article: Article;
   index: number;
-  handleCardClick?: (n: number) => void;
+  handleCardClick?: (n: Article) => void;
 }
 
 const ArticleCard = (props: Props) => {
-  const { headline, index, handleCardClick } = props;
+  const { article, index, handleCardClick } = props;
+  const articleURl = getArticleURL(article.id, index);
 
   const onCardClick = () => {
-    handleCardClick(index);
+    handleCardClick(article);
   };
 
   return (
-    <Link to={`/article/${index}`} style={{ textDecoration: "none" }}>
+    <Link to={`/article/${articleURl}`} style={{ textDecoration: "none" }}>
       <div className="card-wrapper" onClick={onCardClick}>
-        <CardHeader headline={headline} />
+        <CardHeader headline={article.headline} />
       </div>
     </Link>
   );
@@ -27,8 +30,8 @@ const ArticleCard = (props: Props) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    handleCardClick: (index: number) =>
-      dispatch({ type: "SET_ARTICLE_SHOWN", payload: index }),
+    handleCardClick: (article: Article) =>
+      dispatch({ type: "SET_ARTICLE", payload: article }),
   };
 };
 

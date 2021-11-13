@@ -10,31 +10,31 @@ let mockedStore;
 
 describe("ArticleCard component tests", () => {
   test(`ArticleCard component render`, () => {
+    const article = {
+      id: "",
+      headline: "This is a headline",
+      abstract: "",
+      keywords: [],
+      section: "",
+      snippet: "",
+      pub_date: "",
+      source: "",
+      web_url: "",
+    };
     mockedStore = configureStore();
     store = mockedStore({
       article: {
-        articleList: [
-          {
-            id: "",
-            headline: "",
-            abstract: "",
-            keywords: [],
-            section: "",
-            snippet: "",
-            pub_date: "",
-            source: "",
-            web_url: "",
-          },
-        ],
+        articleList: [article],
         page: 0,
         searchClicked: false,
+        article: article,
       },
     });
 
     const { container } = render(
       <Router>
         <Provider store={store}>
-          <ArticleCard headline="This is an headline" index={1} />
+          <ArticleCard article={article} index={1} />
         </Provider>
       </Router>
     );

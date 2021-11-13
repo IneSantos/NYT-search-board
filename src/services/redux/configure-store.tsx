@@ -8,8 +8,10 @@ import rootReducer from "./root-reducer";
 export type State = {
   articleList: Article[];
   page: number;
+  clearClicked: boolean;
   searchClicked: boolean;
   pageClicked: boolean;
+  article: Article;
 };
 
 const persistConfig = {

@@ -13,7 +13,7 @@ const SearchInpuBar = ({ searchInput, handleSearch }: Props) => {
       <h2>Type search query term in here: </h2>
       <div className="search">
         <SearchInput input={searchInput} handleSearch={handleSearch} />
-        <SearchButton />
+        <SearchButton input={searchInput} />
       </div>
     </div>
   );

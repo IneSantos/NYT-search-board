@@ -12,3 +12,14 @@
     border-left: 0;
     padding-right: 30px;
 }
+
+.clear-button {
+    height: 60px;
+    border:  1px solid var(--card-border-color);
+    background: var(--primary-color);
+    text-align: center;
+    color: var(--darker-greyish);
+    cursor: pointer;
+    border-left: 0;
+    border-right: 0;
+}

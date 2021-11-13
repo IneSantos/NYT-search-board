@@ -9,6 +9,11 @@ export type SetArticleList = {
   payload: Article[];
 };
 
+export type SetArticle = {
+  type: "SET_ARTICLE";
+  payload: Article;
+};
+
 export type NextPage = {
   type: "SET_NEXT_PAGE";
 };
@@ -23,6 +28,14 @@ export type SearchClicked = {
 
 export type ResetSearchClicked = {
   type: "RESET_SEARCH_CLICKED";
+};
+
+export type ClearClicked = {
+  type: "CLEAR_CLICKED";
+};
+
+export type ResetClearClicked = {
+  type: "RESET_CLEAR_CLICKED";
 };
 
 export type ResetPaginationClicked = {

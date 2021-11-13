@@ -13,21 +13,17 @@ describe("ArticlePage atom tests", () => {
     mockedStore = configureStore();
     store = mockedStore({
       article: {
-        articleList: [
-          {
-            id: "",
-            headline: "",
-            abstract: "",
-            keywords: [],
-            section: "",
-            snippet: "",
-            pub_date: "",
-            source: "",
-            web_url: "",
-          },
-        ],
-        page: 0,
-        searchClicked: false,
+        article: {
+          id: "",
+          headline: "This is a headline",
+          abstract: "",
+          keywords: [],
+          section: "",
+          snippet: "",
+          pub_date: "",
+          source: "",
+          web_url: "",
+        },
       },
     });
 

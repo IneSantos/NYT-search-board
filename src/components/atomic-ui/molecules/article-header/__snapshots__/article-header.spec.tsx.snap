@@ -5,7 +5,7 @@ exports[`ArticleHeader component tests ArticleHeader component render 1`] = `
   class="article-header-wrapper"
 >
   <a
-    class="article-action article-action-< Go to results page"
+    class="article-action"
     href="/"
   >
      

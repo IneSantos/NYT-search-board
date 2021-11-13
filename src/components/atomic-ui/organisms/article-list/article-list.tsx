@@ -17,7 +17,7 @@ const ArticlesList = (props: Props) => {
         return (
           <ArticleCard
             key={`${article.id}-index-${index}`}
-            headline={article.headline}
+            article={article}
             index={index}
           />
         );

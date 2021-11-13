@@ -4,7 +4,26 @@ const initialState = {
   articleList: [],
   page: -1,
   searchClicked: false,
+  clearClicked: false,
   pageClicked: false,
+  article: {
+    id: "",
+    headline: "",
+    abstract: "",
+    keywords: [
+      {
+        major: "",
+        name: "",
+        rank: 0,
+        value: "",
+      },
+    ],
+    section: "",
+    snippet: "",
+    pub_date: "",
+    source: "",
+    web_url: "",
+  },
 };
 
 describe("reducer tests", () => {
@@ -44,10 +63,8 @@ describe("reducer tests", () => {
         payload: [article],
       })
     ).toStrictEqual({
+      ...initialState,
       articleList: [article],
-      page: -1,
-      searchClicked: false,
-      pageClicked: false,
     });
   });
 
@@ -57,9 +74,8 @@ describe("reducer tests", () => {
         type: "SET_NEXT_PAGE",
       })
     ).toStrictEqual({
-      articleList: [],
+      ...initialState,
       page: 0,
-      searchClicked: false,
       pageClicked: true,
     });
   });
@@ -70,9 +86,8 @@ describe("reducer tests", () => {
         type: "SET_PREV_PAGE",
       })
     ).toStrictEqual({
-      articleList: [],
+      ...initialState,
       page: 0,
-      searchClicked: false,
       pageClicked: true,
     });
   });
@@ -83,10 +98,19 @@ describe("reducer tests", () => {
         type: "SEARCH_CLICKED",
       })
     ).toStrictEqual({
-      articleList: [],
-      page: -1,
+      ...initialState,
       searchClicked: true,
-      pageClicked: false,
+    });
+  });
+
+  test(`reducer clear click value`, () => {
+    expect(
+      reducer(initialState, {
+        type: "CLEAR_CLICKED",
+      })
+    ).toStrictEqual({
+      ...initialState,
+      clearClicked: true,
     });
   });
 
@@ -99,10 +123,22 @@ describe("reducer tests", () => {
         type: "RESET_SEARCH_CLICKED",
       })
     ).toStrictEqual({
-      articleList: [],
-      page: -1,
+      ...initialState,
       searchClicked: false,
-      pageClicked: false,
+    });
+  });
+
+  test(`reducer clear search click value`, () => {
+    const state = reducer(initialState, {
+      type: "CLEAR_CLICKED",
+    });
+    expect(
+      reducer(state, {
+        type: "RESET_CLEAR_CLICKED",
+      })
+    ).toStrictEqual({
+      ...initialState,
+      clearClicked: false,
     });
   });
 
@@ -115,9 +151,7 @@ describe("reducer tests", () => {
         type: "RESET_PAGINATION_CLICKED",
       })
     ).toStrictEqual({
-      articleList: [],
-      page: -1,
-      searchClicked: false,
+      ...initialState,
       pageClicked: false,
     });
   });

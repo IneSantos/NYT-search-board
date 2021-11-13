@@ -1,10 +1,13 @@
 import {
   ResetStore,
   SetArticleList,
+  SetArticle,
   NextPage,
   PrevPage,
   SearchClicked,
   ResetSearchClicked,
+  ClearClicked,
+  ResetClearClicked,
   ResetPaginationClicked,
 } from "./actions";
 import { State } from "./configure-store";
@@ -12,17 +15,39 @@ import { State } from "./configure-store";
 type ArticleAction =
   | ResetStore
   | SetArticleList
+  | SetArticle
   | NextPage
   | PrevPage
   | SearchClicked
   | ResetSearchClicked
+  | ClearClicked
+  | ResetClearClicked
   | ResetPaginationClicked;
 
 const initialState = {
   articleList: [],
   page: -1,
   searchClicked: false,
+  clearClicked: false,
   pageClicked: false,
+  article: {
+    id: "",
+    headline: "",
+    abstract: "",
+    keywords: [
+      {
+        major: "",
+        name: "",
+        rank: 0,
+        value: "",
+      },
+    ],
+    section: "",
+    snippet: "",
+    pub_date: "",
+    source: "",
+    web_url: "",
+  },
 };
 
 export default function reducer(
@@ -37,6 +62,12 @@ export default function reducer(
       return {
         ...state,
         articleList: action.payload,
+      };
+    }
+    case "SET_ARTICLE": {
+      return {
+        ...state,
+        article: action.payload,
       };
     }
     case "SET_NEXT_PAGE": {
@@ -60,10 +91,22 @@ export default function reducer(
         searchClicked: true,
       };
     }
+    case "CLEAR_CLICKED": {
+      return {
+        ...state,
+        clearClicked: true,
+      };
+    }
     case "RESET_SEARCH_CLICKED": {
       return {
         ...state,
         searchClicked: false,
+      };
+    }
+    case "RESET_CLEAR_CLICKED": {
+      return {
+        ...state,
+        clearClicked: false,
       };
     }
     case "RESET_PAGINATION_CLICKED": {

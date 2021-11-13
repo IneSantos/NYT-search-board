@@ -19,7 +19,7 @@ exports[`ArticlePage atom tests ArticlePage component render 1`] = `
         class="article-header-wrapper"
       >
         <a
-          class="article-action article-action-< Go to results page"
+          class="article-action"
           href="/"
         >
            
@@ -46,13 +46,50 @@ exports[`ArticlePage atom tests ArticlePage component render 1`] = `
           class="description"
         />
         <a
-          class="article-action article-action-Read the full article"
+          class="article-action"
           href=""
         >
            
           Read the full article
            
         </a>
+      </div>
+    </div>
+    <div
+      class="page-footer"
+    >
+      <div
+        class="css-1qq1qhc"
+      >
+        
+        <div
+          class=" rcs-buttons"
+        >
+          <button
+            aria-label="Share on Twitter"
+            class="css-trk4o9 rcs-button"
+          >
+            <i
+              class="fab fa-twitter-square"
+            />
+          </button>
+          <button
+            aria-label="Share on Facebook"
+            class="css-hn5fd rcs-button"
+          >
+            <i
+              class="fab fa-facebook-square"
+            />
+          </button>
+          <button
+            aria-label="Share on Email"
+            class="css-1pclnts rcs-button"
+          >
+            <i
+              class="fas fa-envelope-square"
+            />
+          </button>
+        </div>
       </div>
     </div>
   </div>

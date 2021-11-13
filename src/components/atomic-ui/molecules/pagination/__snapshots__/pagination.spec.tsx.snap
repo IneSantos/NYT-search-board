@@ -5,17 +5,17 @@ exports[`Pagination component tests Pagination component render 1`] = `
   class="pagination"
 >
   <a
-    class="article-action article-action-< Prev page"
-  >
-     
-    &lt; Prev page
-     
-  </a>
-  <a
-    class="article-action article-action-Next page >"
+    class="article-action article-action-next-page"
   >
      
     Next page &gt;
+     
+  </a>
+  <a
+    class="article-action article-action-prev-page"
+  >
+     
+    &lt; Prev page
      
   </a>
 </div>

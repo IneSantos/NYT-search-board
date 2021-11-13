@@ -14,7 +14,7 @@ exports[`ArticleCard component tests ArticleCard component render 1`] = `
       <h3
         class="title-small"
       >
-        This is an headline
+        This is a headline
       </h3>
     </div>
   </div>

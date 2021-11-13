@@ -3,16 +3,19 @@ import "./article-action.css";
 
 interface Props {
   name: string;
+  cssClass?: string;
   webURL?: string;
   handleAction?: () => void;
 }
 
 const ArticleAction = (props: Props) => {
-  const { name, webURL, handleAction } = props;
+  const { name, cssClass, webURL, handleAction } = props;
   return (
     <a
       href={webURL}
-      className={`article-action article-action-${name}`}
+      className={`article-action${
+        cssClass ? ` article-action-${cssClass}` : ""
+      }`}
       onClick={handleAction}
     >
       {" "}

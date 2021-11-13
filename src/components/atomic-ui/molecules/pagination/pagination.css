@@ -7,4 +7,13 @@
             justify-content: space-between;
     padding: 0 30px;
     padding-bottom: 30px;
+    flex-direction: row-reverse;
+}
+
+.pagination > .article-action-prev-page{
+    align-self: flex-start;
+}
+
+.pagination > .article-action-next-page{
+    align-self: flex-end;
 }
